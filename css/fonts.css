@@ -1,0 +1,16 @@
+@font-face {
+  font-weight: bold;
+  font-family: "Butler";
+  font-style: normal;
+  src: url("../fonts/Butler-Bold.woff") format("woff");
+  src: url("../fonts/Butler-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Butler";
+  font-style: normal;
+  src: url("../fonts/Butler.woff") format("woff");
+  src: url("../fonts/Butler.woff2") format("woff2");
+}
+/*# sourceMappingURL=fonts.css.map */

@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <link rel="stylesheet" href="css/initialize.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.css" /> -->
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="animate.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
       rel="stylesheet"
@@ -25,25 +30,33 @@
 
   <body>
     <!--ヘッダー-->
-    <header>
+    <header class="menu-bar">
       <!--メニューバー-->
-      <div class="menu-bar">
-        <nav>
-          <div>
-            <ul>
-              <li><a href="#title">Top</a></li>
-              <li><a href="#about-me">About Me</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#works">Works</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <nav>
+        <div>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#" id="top-link" class="menu-link">Top</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" id="aboutme-link" class="menu-link">About Me</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" id="services-link" class="menu-link">Services</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" id="works-link" class="menu-link">Works</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" id="contact-link" class="menu-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!--タイトル-->
-    <section class="title" id="title">
+    <section class="title-section" id="title">
       <div class="title-container">
         <span class="myprefix">Web Enginner</span><br />
         <span class="myname">Daichi<br />YAMAUCHI</span>
@@ -51,30 +64,25 @@
     </section>
 
     <!-- 自己紹介 -->
-    <section class="about-me" id="about-me">
+    <section class="aboutme-section" id="aboutme">
       <div class="portfolio_title profile_title animated fadein">
         <h1>
-          <span
-            class="glyphicon glyphicon-user"
-            style="letter-spacing: 5px"
-          ></span>
+          <span class="material-icons">account_box</span>
           About Me
         </h1>
       </div>
 
       <div class="myprofile-container">
         <div class="image-container flexbox1 animated fadein">
-          <img src="./image/my_profile.jpg" alt="プロフィール写真" />
+          <img
+            src="./image/my_profile.jpg"
+            alt="プロフィール写真"
+            class="myimage"
+          />
         </div>
 
         <div class="text-container">
-          <h2 class="animated fadein">
-            <span
-              class="glyphicon glyphicon-apple"
-              style="letter-spacing: 5px"
-            ></span>
-            Introduction
-          </h2>
+          <h2 class="animated fadein">Introduction</h2>
           <p class="animated fadein">
             初めまして。Webエンジニアの<span class="bold">だいち</span
             >と申します。<br />
@@ -101,7 +109,7 @@
         </h2>
 
         <p class="animated fadein">
-          1993年：宮城県仙台市出身<br />
+          2011年：愛知県立岡崎東高等学校卒業<br />
           2015年：名古屋工業大学工学部電気電子工学科卒業<br />
           2017年：名古屋工業大学大学院情報工学専攻卒業<br />（国内学会1本 /
           国際学会1本 / ジャーナル論文1本執筆 / 国際学会にて受賞）<br />
@@ -111,16 +119,13 @@
     </section>
 
     <!-- スキル紹介 -->
-    <section class="skills" id="skills">
+    <section class="skills-section" id="skills">
       <h1 class="animated fadein">
-        <span
-          class="glyphicon glyphicon-cog"
-          style="letter-spacing: 5px"
-        ></span>
+        <span class="material-icons">settings</span>
         Skills
       </h1>
 
-      <ul class="common-container animated fadein">
+      <ul class="row-container animated fadein">
         <li class="skill">
           <img src="./image/HTML.jpg" alt="HTML" />
           <p>Level: ★★★★★</p>
@@ -159,18 +164,15 @@
     </section>
 
     <!-- サービス紹介 -->
-    <section class="services" id="services">
+    <section class="services-section" id="services">
       <h1 class="animated fadein">
-        <span
-          class="glyphicon glyphicon-globe"
-          style="letter-spacing: 5px"
-        ></span>
+        <span class="material-icons">assignment</span>
         Service
       </h1>
 
-      <ul class="common-container animated fadein">
+      <ul class="row-container animated fadein">
         <li class="service">
-          <img src="./image/desktop.jpg" alt="coding" />
+          <img src="./image/coding.jpg" alt="coding" class="service-image" />
           <h2 class="sevice">コーディング</h2>
           <p>
             LPやコーポレートサイト、ブログなど、
@@ -182,7 +184,11 @@
         </li>
 
         <li class="service">
-          <img src="./image/wordpress.jpg" alt="wordpress" />
+          <img
+            src="./image/wordpress2.jpg"
+            alt="wordpress"
+            class="service-image"
+          />
           <h2 class="sevice">Wordpress</h2>
           <p>
             コーポレートサイトや個人ブログ、およびウェブマガジンなどのWordPressサイトの構築や既存サイトのWordPress移行、コードの修正に対応しております。
@@ -193,31 +199,28 @@
           </p>
         </li>
       </ul>
-      <p style="font-size: 18px">
+      <p class="services-note">
         ※正式なお見積もりは、別途ご相談させていただきます。
       </p>
     </section>
 
     <!--Webサイト ポートフォリオ-->
-    <section class="works" id="works">
+    <section class="works-section" id="works">
       <h1 class="animated fadein">
-        <span
-          class="glyphicon glyphicon-list-alt"
-          style="letter-spacing: 5px"
-        ></span>
+        <span class="material-icons">edit</span>
         Works
       </h1>
 
-      <ul class="common-container animated fadein">
+      <ul class="row-container works-container animated fadein">
         <li class="work">
-          <a
-            href="https://daichi-yamauchi.github.io/my_portfolio/"
-            class="portfolio_link"
-          >
-            <img src="./image/my_portfolio.png" alt="My Portfolio" />
-            <div class="mask1"></div>
-            <div class="mask2"></div>
-            <p>
+          <a href="https://daichi-yamauchi.github.io/my_portfolio/">
+            <img
+              src="./image/my_portfolio.png"
+              alt="My Portfolio"
+              class="work-image"
+            />
+            <div class="mask overray"></div>
+            <p class="work-text overray">
               【Category】オリジナル作品<br />
               【Title】Daichi YAMAUCHI's Portfolio<br />
               【Skill】HTML / CSS / JQuery<br />
@@ -227,11 +230,10 @@
         </li>
 
         <li class="work">
-          <a href="https://snomen.herokuapp.com/" class="portfolio_link">
-            <img src="image/snomen.png" alt="スノメン" />
-            <div class="mask1"></div>
-            <div class="mask2"></div>
-            <p>
+          <a href="https://snomen.herokuapp.com/">
+            <img src="image/snomen.png" alt="スノメン" class="work-image" />
+            <div class="mask overray"></div>
+            <p class="work-text overray">
               【Category】オリジナル作品<br />
               【Title】スノメン<br />
               【Skill】HTML / CSS / Sass / JQuery / Ruby on Rails<br />
@@ -241,14 +243,10 @@
         </li>
 
         <li class="work">
-          <a
-            href="https://daichi-yamauchi.github.io/petris/"
-            class="portfolio_link"
-          >
-            <img src="image/petris.png" alt="portfolio" />
-            <div class="mask1"></div>
-            <div class="mask2"></div>
-            <p>
+          <a href="https://daichi-yamauchi.github.io/petris/">
+            <img src="image/petris.png" alt="portfolio" class="work-image" />
+            <div class="mask overray"></div>
+            <p class="work-text overray">
               【Category】オリジナル作品<br />
               【Title】 ペトリス<br />
               【Skill】 HTML / CSS / Javascript<br />
@@ -259,20 +257,17 @@
       </ul>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact-section" id="contact">
       <h1 class="animated fadein">
-        <span
-          class="glyphicon glyphicon-envelope"
-          style="letter-spacing: 5px"
-        ></span>
+        <span class="material-icons">chat_bubble</span>
         Contact
       </h1>
-      <p>ご依頼（ご相談）はメールよりお願い致します</p>
+      <p class="contact-text">ご依頼（ご相談）はメールよりお願い致します</p>
       <!--SNSアイコン-->
-      <ul class="common-container">
+      <ul class="row-container contact-container">
         <li class="contact">
           <div class="contact-icon">
-            <span class="glyphicon glyphicon-envelope"></span>
+            <span class="material-icons contact-material">email</span>
           </div>
           <a
             href="mailto:daichi.yamauchi.729@gmail.com?body=ご依頼/ご相談内容"
@@ -288,16 +283,16 @@
 
     <footer>
       <!--コピーライト-->
-      <p id="copyright">
+      <p class="copyright">
         Copyright &copy; 2021 Daichi YAMAUCHI's Protfolio All Rights Reserved.
       </p>
     </footer>
     <script src="vendor/jquery-2.2.4.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="vendor/jquery.waypoints.min.js"></script>
-    <script src="vendor/jquery.magnific-popup.min.js"></script>
-    <script src="vendor/mobile-detect.min.js"></script>
+    <!-- <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script> -->
+    <!-- <script src="vendor/jquery.waypoints.min.js"></script> -->
+    <!-- <script src="vendor/jquery.magnific-popup.min.js"></script> -->
+    <!-- <script src="vendor/mobile-detect.min.js"></script> -->
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="jquery.waypoints.min.js"></script>

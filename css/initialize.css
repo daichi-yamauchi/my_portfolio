@@ -1,0 +1,45 @@
+@font-face {
+  font-weight: bold;
+  font-family: "Butler";
+  font-style: normal;
+  src: url("../fonts/Butler-Bold.woff") format("woff");
+  src: url("../fonts/Butler-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Butler";
+  font-style: normal;
+  src: url("../fonts/Butler.woff") format("woff");
+  src: url("../fonts/Butler.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  color: #111;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-family: serif;
+  text-align: center;
+}
+
+h1 span.material-icons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 2.5rem;
+  vertical-align: -0.1em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: serif;
+}
+
+section {
+  margin: 50px;
+}
+/*# sourceMappingURL=initialize.css.map */

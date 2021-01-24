@@ -1,18 +1,4 @@
-@font-face {
-  font-weight: bold;
-  font-family: "Butler";
-  font-style: normal;
-  src: url("../fonts/Butler-Bold.woff") format("woff");
-  src: url("../fonts/Butler-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-weight: normal;
-  font-family: "Butler";
-  font-style: normal;
-  src: url("../fonts/Butler.woff") format("woff");
-  src: url("../fonts/Butler.woff2") format("woff2");
-}
+@import "fonts.scss";
 
 @mixin positionning_center {
   display: flex;
@@ -20,11 +6,7 @@
   justify-content: center;
 }
 
-/* ジェネラル */
-section {
-  margin: 50px;
-}
-
+/* 共通 */
 .bold {
   font-weight: bold;
 }
@@ -34,9 +16,8 @@ section {
   font-weight: bold;
 }
 
-.common-container {
+@mixin common-container {
   display: flex;
-  justify-content: space-around;
   div,
   li {
     list-style: none;
@@ -46,131 +27,218 @@ section {
   }
 }
 
-/* メニューバー */
-header {
-  height: 80px;
+.row-container {
+  @include common-container;
+  justify-content: space-around;
 }
+
+.colunm-container {
+  @include common-container;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* メニューバー */
 .menu-bar {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 3;
+  height: 80px;
   background-color: white;
   border-bottom: solid 1px #eee;
-  ul {
-    display: flex;
-    width: 400px;
-    margin: 0 0 0 auto;
-    li {
-      width: 100px;
-      height: 80px;
-      text-align: center;
-      list-style: none;
-      @include positionning_center;
-    }
+}
+
+.menu-list {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+.menu-item {
+  width: 120px;
+  height: 80px;
+  text-align: center;
+  list-style: none;
+  @include positionning_center;
+}
+
+.menu-link {
+  width: 100%;
+  height: 80px;
+  color: #111;
+  line-height: 80px;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    color: #eee;
+    background-color: #aaa;
   }
 }
 
-h1 {
-  text-align: center;
-}
+/********************
+ * 各セクション 
+ ********************/
 
-/* 各セクション */
+/*** タイトル ***/
 
-section.title {
+.title-section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 500px;
+  height: 600px;
   margin: 0;
   background: linear-gradient(to bottom, transparent, 90%, white),
     url("../image/background1.jpg");
   background-size: cover;
-  .title-container {
-    margin-right: 100px;
-    text-align: end;
+}
+
+.title-container {
+  margin-right: 100px;
+  text-align: end;
+}
+
+.myprefix {
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "Butler", serif;
+  font-style: normal;
+}
+.myname {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Butler", serif;
+  font-style: normal;
+}
+
+/*** 自己紹介 ***/
+
+.myprofile-container {
+  display: flex;
+}
+
+.image-container {
+  width: 30%;
+  @include positionning_center;
+}
+.text-container {
+  width: 70%;
+}
+
+.myimage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.education-container {
+  padding-left: 30px;
+}
+
+/*** スキル ***/
+
+.skill {
+  width: 10%;
+}
+
+/*** サービス ***/
+
+.service {
+  width: 40%;
+}
+
+.service-image {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.services-note {
+  text-align: center;
+}
+
+/*** ワーク ***/
+
+.works-container {
+  flex-wrap: wrap;
+}
+
+.mask {
+  background-color: rgba($color: #000000, $alpha: 0);
+}
+
+.work-text {
+  padding: 20px;
+  color: rgba($color: #000000, $alpha: 0);
+}
+
+.overray {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  transition: all 300ms 0s ease;
+}
+
+.work {
+  position: relative;
+  width: 400px;
+  margin: 20px auto;
+
+  &:hover .mask {
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
   }
 
-  .myprefix {
-    font-weight: normal;
-    font-size: 20px;
-    font-family: "Butler", serif;
-    font-style: normal;
-  }
-  .myname {
-    font-weight: bold;
-    font-size: 50px;
-    font-family: "Butler", serif;
-    font-style: normal;
+  &:hover .work-text {
+    bottom: 0;
+    color: rgba($color: #eee, $alpha: 1);
   }
 }
 
-section.about-me {
-  .myprofile-container {
-    display: flex;
-
-    .image-container {
-      width: 30%;
-      @include positionning_center;
-    }
-    .text-container {
-      width: 70%;
-    }
-
-    img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-    }
-  }
+.work-image {
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 0;
 }
 
-section.skills {
-  .skill {
-    width: 10%;
-  }
+/*** コンタクト ***/
+
+.contact-text {
+  text-align: center;
 }
 
-section.services {
-  .service {
-    width: 40%;
-  }
+.contact-container {
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-section.works {
-  .work {
-    width: 250px;
-    img {
-      height: 250/4 * 3px;
-      object-fit: cover;
-      object-position: 50% 0;
-    }
-  }
+.contact {
+  width: 30px;
 }
 
-section.contact {
-  p {
-    text-align: center;
-  }
-  .common-container {
-    width: 150px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .contact {
-    width: 30px;
-  }
-  .contact-icon {
-    width: 30px;
-    height: 30px;
-    color: white;
-    background-color: #555;
-    border-radius: 10%;
-    @include positionning_center;
-  }
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #555;
+  border-radius: 10%;
+  @include positionning_center;
 }
 
-footer {
+.contact-material {
+  font-size: 20px;
+}
+
+/********************
+ * フッター
+ ********************/
+
+.copyright {
+  font-size: 0.3rem;
   text-align: center;
 }
