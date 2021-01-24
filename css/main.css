@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@font-face {
+  font-weight: bold;
+  font-family: "Butler";
+  font-style: normal;
+  src: url("../fonts/Butler-Bold.woff") format("woff");
+  src: url("../fonts/Butler-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Butler";
+  font-style: normal;
+  src: url("../fonts/Butler.woff") format("woff");
+  src: url("../fonts/Butler.woff2") format("woff2");
+}
+
+/* ジェネラル */
+section {
+  margin: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.red-bold {
+  color: red;
+  font-weight: bold;
+}
+
+.common-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.common-container div,
+.common-container li {
+  list-style: none;
+}
+
+.common-container div img,
+.common-container li img {
+  width: 100%;
+}
+
+/* メニューバー */
+header {
+  height: 80px;
+}
+
+.menu-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-color: white;
+  border-bottom: solid 1px #eee;
+}
+
+.menu-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  margin: 0 0 0 auto;
+}
+
+.menu-bar ul li {
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* 各セクション */
+section.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 500px;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background1.jpg");
+  background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background1.jpg");
+  background-size: cover;
+}
+
+section.title .title-container {
+  margin-right: 100px;
+  text-align: end;
+}
+
+section.title .myprefix {
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "Butler", serif;
+  font-style: normal;
+}
+
+section.title .myname {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Butler", serif;
+  font-style: normal;
+}
+
+section.about-me .myprofile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.about-me .myprofile-container .image-container {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.about-me .myprofile-container .text-container {
+  width: 70%;
+}
+
+section.about-me .myprofile-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+section.skills .skill {
+  width: 10%;
+}
+
+section.services .service {
+  width: 40%;
+}
+
+section.works .work {
+  width: 250px;
+}
+
+section.works .work img {
+  height: 187.5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+}
+
+section.contact p {
+  text-align: center;
+}
+
+section.contact .common-container {
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+section.contact .contact {
+  width: 30px;
+}
+
+section.contact .contact-icon {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #555;
+  border-radius: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
