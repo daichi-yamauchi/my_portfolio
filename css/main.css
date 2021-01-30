@@ -25,45 +25,8 @@
   font-weight: bold;
 }
 
-.row-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.row-container div,
-.row-container li {
-  list-style: none;
-}
-
-.row-container div img,
-.row-container li img {
-  width: 100%;
-}
-
-.colunm-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.colunm-container div,
-.colunm-container li {
-  list-style: none;
-}
-
-.colunm-container div img,
-.colunm-container li img {
-  width: 100%;
+.fadein {
+  visibility: hidden;
 }
 
 .flex-wrap {
@@ -168,6 +131,7 @@
 
 @media screen and (min-width: 768px) {
   .title-section {
+    margin-top: 80px;
     padding-top: 66.6%;
     background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background1.jpg");
     background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background1.jpg");
@@ -360,6 +324,26 @@
 }
 
 /*** ワーク ***/
+.works-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works-container div,
+.works-container li {
+  list-style: none;
+}
+
+.works-container div img,
+.works-container li img {
+  width: 100%;
+}
+
 .work {
   position: relative;
   width: 350px;
@@ -411,9 +395,24 @@
 }
 
 .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 150px;
   margin: 0 auto;
   padding: 0;
+}
+
+.contact-container div,
+.contact-container li {
+  list-style: none;
+}
+
+.contact-container div img,
+.contact-container li img {
+  width: 100%;
 }
 
 .contact {

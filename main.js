@@ -29,9 +29,10 @@ scroll("#contact-link", "#contact");
 $(".fadein").waypoint(
   function (direction) {
     if (direction === "down") {
+      $(this.element).css("visibility", "visible");
       $(this.element).addClass("fadeInUp");
       this.destroy();
     }
   },
-  { offset: "100%" }
+  { offset: "90%" }
 );
