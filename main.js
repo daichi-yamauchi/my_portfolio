@@ -1,18 +1,19 @@
-// // メニューバー
-// $('#toggle').click(function() {
-//    $(this).toggleClass("active");
-//    $('#overlay').toggleClass("open");
-//    if ($("html div").not("#overlay").hasClass("blur")){
-//       $("html div").not("#overlay").not(".button_container").removeClass("blur")
-//    }else{
-//       $("html div").not("#overlay").not(".button_container").addClass("blur")
-//    }
-// });
+// メニューバー
+$("#hamburger-btn").click(function () {
+  $(this).toggleClass("in-open");
+  $("#nav-menu").toggleClass("hamburger-menu");
+});
+
+$(".menu-item").click(function () {
+  $("#hamburger-btn").toggleClass("in-open");
+  $("#nav-menu").toggleClass("hamburger-menu");
+});
 
 // 特定の位置までスクロール
 let scroll = (link, target) => {
+  let offset = document.documentElement.offsetWidth > 768 ? 80 : 0;
   $(link).click(() => {
-    $("html,body").animate({ scrollTop: $(target).offset().top - 80 });
+    $("html,body").animate({ scrollTop: $(target).offset().top - offset });
     $("#overlay").removeClass("open");
     $("html div").removeClass("blur");
     $("#toggle").toggleClass("active");
@@ -21,6 +22,7 @@ let scroll = (link, target) => {
 
 scroll("#top-link", "#title");
 scroll("#aboutme-link", "#aboutme");
+scroll("#skills-link", "#skills");
 scroll("#services-link", "#services");
 scroll("#works-link", "#works");
 scroll("#contact-link", "#contact");

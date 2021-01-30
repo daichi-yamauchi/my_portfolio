@@ -35,67 +35,6 @@
 }
 
 /********************
- * メニューバー 
- ********************/
-.menu-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 3;
-  display: none;
-  height: 80px;
-  background-color: white;
-  border-bottom: solid 1px #eee;
-}
-
-.menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 0 0 0 auto;
-}
-
-.menu-item {
-  width: 120px;
-  height: 80px;
-  text-align: center;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.menu-link {
-  width: 100%;
-  height: 80px;
-  color: #111;
-  line-height: 80px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.menu-link:hover {
-  color: #eee;
-  background-color: #aaa;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-bar {
-    display: block;
-  }
-}
-
-/********************
  * 各セクション 
  ********************/
 /*** タイトル ***/
