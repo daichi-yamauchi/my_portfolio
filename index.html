@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link rel="stylesheet" href="css/initialize.css" />
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="bootstrap/css/bootstrap.css" /> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Cinzel&display=swap"
-      rel="stylesheet"
-    />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-    />
+    /> -->
   </head>
 
   <body>
@@ -57,15 +46,17 @@
 
     <!--タイトル-->
     <section class="title-section" id="title">
-      <div class="title-container">
-        <span class="myprefix">Web Enginner</span><br />
-        <span class="myname">Daichi<br />YAMAUCHI</span>
-      </div>
+      <dev class="background-containter">
+        <div class="title-container">
+          <span class="myprefix">Web Enginner</span><br />
+          <span class="myname">Daichi<br />YAMAUCHI</span>
+        </div>
+      </dev>
     </section>
 
     <!-- 自己紹介 -->
-    <section class="aboutme-section" id="aboutme">
-      <div class="portfolio_title profile_title animated fadein">
+    <section class="aboutme-section animated fadein" id="aboutme">
+      <div class="portfolio_title profile_title">
         <h1>
           <span class="material-icons">account_box</span>
           About Me
@@ -73,7 +64,7 @@
       </div>
 
       <div class="myprofile-container">
-        <div class="image-container flexbox1 animated fadein">
+        <div class="image-container flexbox1">
           <img
             src="./image/my_profile.jpg"
             alt="プロフィール写真"
@@ -82,8 +73,8 @@
         </div>
 
         <div class="text-container">
-          <h2 class="animated fadein">Introduction</h2>
-          <p class="animated fadein">
+          <h2>Introduction</h2>
+          <p>
             初めまして。Webエンジニアの<span class="bold">だいち</span
             >と申します。<br />
             現在フロントエンドを中心に、Webサイト制作およびWebアプリケーションの開発を行なっております。<br />
@@ -100,7 +91,7 @@
       </div>
 
       <div class="education-container">
-        <h2 class="animated fadein">
+        <h2>
           <span
             class="glyphicon glyphicon-education"
             style="letter-spacing: 5px"
@@ -108,7 +99,7 @@
           Educations
         </h2>
 
-        <p class="animated fadein">
+        <p>
           2011年：愛知県立岡崎東高等学校卒業<br />
           2015年：名古屋工業大学工学部電気電子工学科卒業<br />
           2017年：名古屋工業大学大学院情報工学専攻卒業<br />（国内学会1本 /
@@ -119,60 +110,62 @@
     </section>
 
     <!-- スキル紹介 -->
-    <section class="skills-section" id="skills">
-      <h1 class="animated fadein">
+    <section class="skills-section animated fadein" id="skills">
+      <h1>
         <span class="material-icons">settings</span>
         Skills
       </h1>
 
-      <ul class="row-container animated fadein">
+      <ul class="row-container flex-wrap skills-container">
         <li class="skill">
           <img src="./image/HTML.jpg" alt="HTML" />
-          <p>Level: ★★★★★</p>
+          <p class="skill-level">Level: ★★★★★</p>
         </li>
 
         <li class="skill">
           <img src="./image/CSS.jpg" alt="CSS" />
-          <p>Level: ★★★★★</p>
+          <p class="skill-level">Level: ★★★★★</p>
         </li>
 
         <li class="skill">
           <img src="./image/Javascript.jpg" alt="Javascript" />
-          <p>Level: ★★★★★<br /></p>
+          <p class="skill-level">Level: ★★★★★<br /></p>
         </li>
 
         <li class="skill">
           <img src="./image/Wordpress.jpg" alt="Wordpress" />
-          <p>Level: ★★★★★</p>
+          <p class="skill-level">Level: ★★★★★</p>
         </li>
 
         <li class="skill">
           <img src="./image/Ruby.jpg" alt="Ruby on Rails" />
-          <p>Level: ★★★★☆<br /></p>
+          <p class="skill-level">Level: ★★★★☆<br /></p>
         </li>
 
         <li class="skill">
           <img src="./image/MySQL.jpg" alt="MySQL" />
-          <p>Level: ★★★★☆</p>
+          <p class="skill-level">Level: ★★★★☆</p>
         </li>
 
         <li class="skill">
           <img src="./image/github.jpg" alt="github" />
-          <p>Level: ★★★★★</p>
+          <p class="skill-level">Level: ★★★★★</p>
         </li>
       </ul>
     </section>
 
     <!-- サービス紹介 -->
-    <section class="services-section" id="services">
-      <h1 class="animated fadein">
+    <section class="services-section animated fadein" id="services">
+      <h1 class="">
         <span class="material-icons">assignment</span>
         Service
       </h1>
 
-      <ul class="row-container animated fadein">
+      <ul class="services-container">
         <li class="service">
-          <img src="./image/coding.jpg" alt="coding" class="service-image" />
+          <div class="service-image-container">
+            <img src="./image/coding.jpg" alt="coding" class="service-image" />
+          </div>
           <h2 class="sevice">コーディング</h2>
           <p>
             LPやコーポレートサイト、ブログなど、
@@ -184,11 +177,13 @@
         </li>
 
         <li class="service">
-          <img
-            src="./image/wordpress2.jpg"
-            alt="wordpress"
-            class="service-image"
-          />
+          <div class="service-image-container">
+            <img
+              src="./image/wordpress2.jpg"
+              alt="wordpress"
+              class="service-image"
+            />
+          </div>
           <h2 class="sevice">Wordpress</h2>
           <p>
             コーポレートサイトや個人ブログ、およびウェブマガジンなどのWordPressサイトの構築や既存サイトのWordPress移行、コードの修正に対応しております。
@@ -205,13 +200,12 @@
     </section>
 
     <!--Webサイト ポートフォリオ-->
-    <section class="works-section" id="works">
-      <h1 class="animated fadein">
+    <section class="works-section animated fadein" id="works">
+      <h1>
         <span class="material-icons">edit</span>
         Works
       </h1>
-
-      <ul class="row-container works-container animated fadein">
+      <ul class="row-container flex-wrap">
         <li class="work">
           <a
             href="https://daichi-yamauchi.github.io/my_portfolio/"
@@ -269,8 +263,8 @@
       </ul>
     </section>
 
-    <section class="contact-section" id="contact">
-      <h1 class="animated fadein">
+    <section class="contact-section animated fadein" id="contact">
+      <h1>
         <span class="material-icons">chat_bubble</span>
         Contact
       </h1>
@@ -278,17 +272,19 @@
       <!--SNSアイコン-->
       <ul class="row-container contact-container">
         <li class="contact">
-          <div class="contact-icon">
-            <span class="material-icons contact-material">email</span>
-          </div>
           <a
             href="mailto:daichi.yamauchi.729@gmail.com?body=ご依頼/ご相談内容"
             class="gmail"
-          ></a>
+          >
+            <div class="contact-icon">
+              <span class="material-icons contact-material">email</span>
+            </div>
+          </a>
         </li>
         <li class="contact">
-          <img src="image/twitter.png" alt="twitter" />
-          <a href="https://twitter.com/DAICHI5463" class="twitter"></a>
+          <a href="https://twitter.com/DAICHI5463" class="twitter">
+            <img src="image/twitter.png" alt="twitter" />
+          </a>
         </li>
       </ul>
     </section>
@@ -299,14 +295,9 @@
         Copyright &copy; 2021 Daichi YAMAUCHI's Protfolio All Rights Reserved.
       </p>
     </footer>
-    <script src="vendor/jquery-2.2.4.min.js"></script>
-    <!-- <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script> -->
-    <!-- <script src="vendor/jquery.waypoints.min.js"></script> -->
-    <!-- <script src="vendor/jquery.magnific-popup.min.js"></script> -->
-    <!-- <script src="vendor/mobile-detect.min.js"></script> -->
-    <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="vendor/jquery.waypoints.min.js"></script>
+    <script src="main.js"></script>
     <script src="jquery.waypoints.min.js"></script>
   </body>
 </html>

@@ -66,13 +66,21 @@
   width: 100%;
 }
 
-/* メニューバー */
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/********************
+ * メニューバー 
+ ********************/
 .menu-bar {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 3;
+  display: none;
   height: 80px;
   background-color: white;
   border-bottom: solid 1px #eee;
@@ -118,55 +126,67 @@
   background-color: #aaa;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-bar {
+    display: block;
+  }
+}
+
 /********************
  * 各セクション 
  ********************/
 /*** タイトル ***/
 .title-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 600px;
+  position: relative;
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background1.jpg");
-  background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background1.jpg");
-  background-size: cover;
+  padding-top: 150%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background2.jpg");
+  background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background2.jpg");
+  background-size: contain;
 }
 
 .title-container {
-  margin-right: 100px;
+  position: absolute;
+  top: 70%;
+  right: 10%;
   text-align: end;
 }
 
 .myprefix {
   font-weight: normal;
-  font-size: 20px;
+  font-size: 5vw;
   font-family: "Butler", serif;
   font-style: normal;
 }
 
 .myname {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 12vw;
   font-family: "Butler", serif;
   font-style: normal;
 }
 
-/*** 自己紹介 ***/
-.myprofile-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .title-section {
+    padding-top: 66.6%;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background1.jpg");
+    background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background1.jpg");
+    background-size: contain;
+  }
+  .title-container {
+    top: 50%;
+    right: 10%;
+  }
+  .myprefix {
+    font-size: 1rem;
+  }
+  .myname {
+    font-size: 3rem;
+  }
 }
 
+/*** 自己紹介 ***/
 .image-container {
-  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,33 +198,136 @@
           justify-content: center;
 }
 
-.text-container {
-  width: 70%;
-}
-
 .myimage {
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  max-width: 200px;
   border-radius: 50%;
 }
 
-.education-container {
-  padding-left: 30px;
+@media screen and (min-width: 768px) {
+  .myprofile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .image-container {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .text-container {
+    width: 70%;
+  }
+  .myimage {
+    width: 80%;
+    max-width: 200px;
+    border-radius: 50%;
+  }
+  .education-container {
+    padding-left: 30px;
+  }
 }
 
 /*** スキル ***/
+.skills-container {
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 30px;
+}
+
+.skills-container div,
+.skills-container li {
+  list-style: none;
+}
+
+.skills-container div img,
+.skills-container li img {
+  width: 100%;
+}
+
 .skill {
-  width: 10%;
+  width: 80px;
+}
+
+.skill-level {
+  margin: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .skills-container {
+    -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+  }
+  .skill {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skill {
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skills-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    justify-content: space-around;
+  }
+  .skills-container div,
+  .skills-container li {
+    list-style: none;
+  }
+  .skills-container div img,
+  .skills-container li img {
+    width: 100%;
+  }
 }
 
 /*** サービス ***/
-.service {
-  width: 40%;
+.services-container div,
+.services-container li {
+  list-style: none;
+}
+
+.services-container div img,
+.services-container li img {
+  width: 100%;
+}
+
+.service-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 56%;
 }
 
 .service-image {
-  width: 300px;
-  height: 250px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 0;
@@ -215,53 +338,71 @@
   text-align: center;
 }
 
-/*** ワーク ***/
-.works-container {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .services-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .services-container div,
+  .services-container li {
+    list-style: none;
+  }
+  .services-container div img,
+  .services-container li img {
+    width: 100%;
+  }
+  .service {
+    width: 45%;
+  }
 }
 
-.mask {
-  background-color: rgba(0, 0, 0, 0);
+/*** ワーク ***/
+.work {
+  position: relative;
+  width: 350px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .work-text {
-  padding: 20px;
-  color: rgba(0, 0, 0, 0);
+  padding: 10px;
 }
 
-.overray {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 100%;
-  left: 0;
-  -webkit-transition: all 300ms 0s ease;
-  transition: all 300ms 0s ease;
-}
-
-.work {
-  position: relative;
-  width: 400px;
-  margin: 20px auto;
-}
-
-.work:hover .mask {
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.work:hover .work-text {
-  bottom: 0;
-  color: #eeeeee;
-}
-
-.work-image {
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
+@media screen and (min-width: 768px) {
+  .mask {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .work-text {
+    padding: 20px;
+    color: rgba(0, 0, 0, 0);
+  }
+  .overray {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    border-radius: 5px;
+    -webkit-transition: all 300ms 0s ease;
+    transition: all 300ms 0s ease;
+  }
+  .work {
+    background-color: transparent;
+  }
+  .work:hover .mask {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .work:hover .work-text {
+    bottom: 0;
+    color: #eeeeee;
+  }
 }
 
 /*** コンタクト ***/

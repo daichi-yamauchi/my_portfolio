@@ -17,7 +17,6 @@
 }
 
 @mixin common-container {
-  display: flex;
   div,
   li {
     list-style: none;
@@ -28,23 +27,53 @@
 }
 
 .row-container {
-  @include common-container;
+  display: flex;
   justify-content: space-around;
+  @include common-container;
 }
 
 .colunm-container {
-  @include common-container;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  @include common-container;
 }
 
-/* メニューバー */
+@mixin colunm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include common-container;
+}
+
+@mixin row-container {
+  display: flex;
+  justify-content: space-around;
+  @include common-container;
+}
+
+@mixin grid-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  @include common-container;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/********************
+ * メニューバー 
+ ********************/
+
 .menu-bar {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 3;
+  display: none;
   height: 80px;
   background-color: white;
   border-bottom: solid 1px #eee;
@@ -77,6 +106,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .menu-bar {
+    display: block;
+  }
+}
+
 /********************
  * 各セクション 
  ********************/
@@ -84,73 +119,152 @@
 /*** タイトル ***/
 
 .title-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 600px;
+  position: relative;
   margin: 0;
+  padding-top: 150%;
   background: linear-gradient(to bottom, transparent, 90%, white),
-    url("../image/background1.jpg");
-  background-size: cover;
+    url("../image/background2.jpg");
+  background-size: contain;
 }
 
 .title-container {
-  margin-right: 100px;
+  position: absolute;
+  top: 70%;
+  right: 10%;
   text-align: end;
 }
 
 .myprefix {
   font-weight: normal;
-  font-size: 20px;
+  font-size: 5vw;
   font-family: "Butler", serif;
   font-style: normal;
 }
+
 .myname {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 12vw;
   font-family: "Butler", serif;
   font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .title-section {
+    padding-top: 66.6%;
+    background: linear-gradient(to bottom, transparent, 90%, white),
+      url("../image/background1.jpg");
+    background-size: contain;
+  }
+
+  .title-container {
+    top: 50%;
+    right: 10%;
+  }
+
+  .myprefix {
+    font-size: 1rem;
+  }
+
+  .myname {
+    font-size: 3rem;
+  }
 }
 
 /*** 自己紹介 ***/
 
-.myprofile-container {
-  display: flex;
-}
-
 .image-container {
-  width: 30%;
   @include positionning_center;
-}
-.text-container {
-  width: 70%;
 }
 
 .myimage {
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  max-width: 200px;
   border-radius: 50%;
 }
 
-.education-container {
-  padding-left: 30px;
+@media screen and (min-width: 768px) {
+  .myprofile-container {
+    display: flex;
+  }
+
+  .image-container {
+    width: 30%;
+    @include positionning_center;
+  }
+  .text-container {
+    width: 70%;
+  }
+
+  .myimage {
+    width: 80%;
+    max-width: 200px;
+    border-radius: 50%;
+  }
+
+  .education-container {
+    padding-left: 30px;
+  }
 }
 
 /*** スキル ***/
 
+.skills-container {
+  grid-template-columns: 33% 33% 33%;
+  @include grid-container;
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
 .skill {
-  width: 10%;
+  width: 80px;
+}
+
+.skill-level {
+  margin: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .skills-container {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .skill {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skill {
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skills-container {
+    @include row-container;
+    justify-content: space-around;
+  }
 }
 
 /*** サービス ***/
 
-.service {
-  width: 40%;
+.services-container {
+  @include common-container;
+}
+
+.service-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 56%;
 }
 
 .service-image {
-  width: 300px;
-  height: 250px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 0;
 }
@@ -159,50 +273,64 @@
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .services-container {
+    @include row-container;
+  }
+
+  .service {
+    width: 45%;
+  }
+}
+
 /*** ワーク ***/
-
-.works-container {
-  flex-wrap: wrap;
-}
-
-.mask {
-  background-color: rgba($color: #000000, $alpha: 0);
-}
-
-.work-text {
-  padding: 20px;
-  color: rgba($color: #000000, $alpha: 0);
-}
-
-.overray {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 100%;
-  left: 0;
-  transition: all 300ms 0s ease;
-}
 
 .work {
   position: relative;
-  width: 400px;
+  width: 350px;
   margin: 20px auto;
-
-  &:hover .mask {
-    bottom: 0;
-    background-color: rgba($color: #000000, $alpha: 0.7);
-  }
-
-  &:hover .work-text {
-    bottom: 0;
-    color: rgba($color: #eee, $alpha: 1);
-  }
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-.work-image {
-  height: 300px;
-  object-fit: cover;
-  object-position: 50% 0;
+.work-text {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .mask {
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+
+  .work-text {
+    padding: 20px;
+    color: rgba($color: #000000, $alpha: 0);
+  }
+
+  .overray {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    border-radius: 5px;
+    transition: all 300ms 0s ease;
+  }
+
+  .work {
+    background-color: transparent;
+
+    &:hover .mask {
+      bottom: 0;
+      background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+
+    &:hover .work-text {
+      bottom: 0;
+      color: rgba($color: #eee, $alpha: 1);
+    }
+  }
 }
 
 /*** コンタクト ***/
