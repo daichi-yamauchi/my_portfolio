@@ -8,5 +8,6 @@
   ],
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "prettier.stylelintIntegration": true
+  "prettier.stylelintIntegration": true,
+  "liveServer.settings.port": 5501
 }
