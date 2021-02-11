@@ -29,14 +29,44 @@
   visibility: hidden;
 }
 
+/*** 白の背景設定 ***/
+.bg-white {
+  position: absolute;
+  top: 75vw;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
 /********************
- * 各セクション 
- ********************/
+* 各セクション 
+********************/
 /*** タイトル ***/
 .title-section {
-  position: relative;
-  margin: 0;
-  padding-top: 150%;
+  height: 150vw;
+}
+
+.main-image-sp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+}
+
+.main-image-pc {
+  display: none;
+}
+
+.main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 150vw;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background2.jpg");
   background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background2.jpg");
   background-size: contain;
@@ -44,7 +74,7 @@
 
 .title-container {
   position: absolute;
-  top: 70%;
+  top: 40%;
   right: 10%;
   text-align: end;
 }
@@ -65,14 +95,32 @@
 
 @media screen and (min-width: 768px) {
   .title-section {
-    margin-top: 80px;
-    padding-top: 66.6%;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background1.jpg");
-    background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background1.jpg");
+    height: 70vw;
+  }
+  .main-image-pc {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+  .main-image {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 75vw;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(90%, white)), url("../image/background1.jpg");
+    background: linear-gradient(to bottom, transparent 80%, white 90%), url("../image/background1.jpg");
     background-size: contain;
   }
+  .main-image-sp {
+    display: none;
+  }
   .title-container {
-    top: 50%;
+    top: 40vw;
     right: 10%;
   }
   .myprefix {
