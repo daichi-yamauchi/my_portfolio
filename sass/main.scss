@@ -272,18 +272,18 @@
 
 .contact-container {
   @include row-container;
-  width: 150px;
+  width: 300px;
   margin: 0 auto;
   padding: 0;
 }
 
 .contact {
-  width: 30px;
+  width: 60px;
 }
 
 .contact-icon {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   color: white;
   background-color: #555;
   border-radius: 10%;
@@ -291,7 +291,7 @@
 }
 
 .contact-material {
-  font-size: 20px;
+  font-size: 40px !important;
 }
 
 /********************
