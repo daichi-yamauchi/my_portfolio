@@ -1,0 +1,46 @@
+@mixin positionning_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin common-container {
+  div,
+  li {
+    list-style: none;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@mixin colunm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include common-container;
+}
+
+@mixin row-container {
+  display: flex;
+  justify-content: space-around;
+  @include common-container;
+}
+
+@mixin grid-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  @include common-container;
+}
+
+// レスポンシブ対応
+$breakpoints: (
+  "pc": "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

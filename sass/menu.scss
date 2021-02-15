@@ -1,3 +1,5 @@
+@import "define.scss";
+
 @mixin positionning_center {
   display: flex;
   align-items: center;
@@ -86,7 +88,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include mq() {
   #nav-menu {
     position: fixed;
     top: 0;
