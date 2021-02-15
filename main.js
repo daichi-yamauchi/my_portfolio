@@ -38,3 +38,16 @@ $(".fadein").waypoint(
   },
   { offset: "90%" }
 );
+
+// Animate.cssのfadeInUpエフェクトを適用
+$(".main-image").waypoint(
+  function (direction) {
+    if (direction === "down") {
+      $(this.element).addClass("bg-dilute");
+    }
+    if (direction === "up") {
+      $(this.element).removeClass("bg-dilute");
+    }
+  },
+  { offset: "0%" }
+);

@@ -15,21 +15,6 @@
   visibility: hidden;
 }
 
-/*** 白の背景設定 ***/
-
-.bg-white {
-  position: absolute;
-  top: 75vw;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-}
-
-s::-webkit-scrollbar {
-  display: none;
-}
-
 /********************
 * 各セクション 
 ********************/
@@ -40,29 +25,20 @@ s::-webkit-scrollbar {
   height: 150vw;
 }
 
-.main-image-sp {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-}
-
-.main-image-pc {
-  display: none;
-}
-
 .main-image {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
   display: block;
   width: calc(100vw - 15px);
   height: 150vw;
   background: linear-gradient(to bottom, transparent, 90%, white),
     url("../image/background2.jpg");
+  background-color: rgba(255, 255, 255, 0);
   background-size: contain;
+  background-blend-mode: lighten;
+  transition: all 1s;
 }
 
 .title-container {
@@ -92,15 +68,13 @@ s::-webkit-scrollbar {
   }
 
   .main-image {
-    position: absolute;
+    position: fixed;
     top: 80px;
     right: 0;
     left: 0;
-    display: block;
     height: 75vw;
     background: linear-gradient(to bottom, transparent 80%, white 90%),
       url("../image/background1.jpg");
-    background-size: contain;
   }
 
   .title-container {
@@ -115,6 +89,11 @@ s::-webkit-scrollbar {
   .myname {
     font-size: 3rem;
   }
+}
+
+.bg-dilute {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: lighten;
 }
 
 /*** 自己紹介 ***/
