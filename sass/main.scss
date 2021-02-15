@@ -26,6 +26,10 @@
   background-color: #fff;
 }
 
+s::-webkit-scrollbar {
+  display: none;
+}
+
 /********************
 * 各セクション 
 ********************/
@@ -54,7 +58,7 @@
   top: 0;
   left: 0;
   display: block;
-  width: 100vw;
+  width: calc(100vw - 15px);
   height: 150vw;
   background: linear-gradient(to bottom, transparent, 90%, white),
     url("../image/background2.jpg");
@@ -87,29 +91,16 @@
     height: 70vw;
   }
 
-  .main-image-pc {
+  .main-image {
     position: absolute;
     top: 80px;
     right: 0;
     left: 0;
     display: block;
-    width: 100%;
-  }
-
-  .main-image {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    display: block;
-    width: 100vw;
     height: 75vw;
     background: linear-gradient(to bottom, transparent 80%, white 90%),
       url("../image/background1.jpg");
     background-size: contain;
-  }
-
-  .main-image-sp {
-    display: none;
   }
 
   .title-container {

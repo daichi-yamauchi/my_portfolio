@@ -39,6 +39,10 @@
   background-color: #fff;
 }
 
+s::-webkit-scrollbar {
+  display: none;
+}
+
 /********************
 * 各セクション 
 ********************/
@@ -65,7 +69,7 @@
   top: 0;
   left: 0;
   display: block;
-  width: 100vw;
+  width: calc(100vw - 15px);
   height: 150vw;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%), to(white)), url("../image/background2.jpg");
   background: linear-gradient(to bottom, transparent, 90%, white), url("../image/background2.jpg");
@@ -97,27 +101,16 @@
   .title-section {
     height: 70vw;
   }
-  .main-image-pc {
+  .main-image {
     position: absolute;
     top: 80px;
     right: 0;
     left: 0;
     display: block;
-    width: 100%;
-  }
-  .main-image {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    display: block;
-    width: 100vw;
     height: 75vw;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(90%, white)), url("../image/background1.jpg");
     background: linear-gradient(to bottom, transparent 80%, white 90%), url("../image/background1.jpg");
     background-size: contain;
-  }
-  .main-image-sp {
-    display: none;
   }
   .title-container {
     top: 40vw;
