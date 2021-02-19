@@ -105,7 +105,7 @@
   background-blend-mode: lighten;
 }
 
-/*** 自己紹介 ***/
+/***** 自己紹介 *****/
 .image-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,6 +124,15 @@
   border-radius: 50%;
 }
 
+.greeting {
+  line-height: 2;
+}
+
+.my-values {
+  padding-left: 2em;
+  line-height: 2;
+}
+
 @media screen and (min-width: 768px) {
   .myprofile-container {
     display: -webkit-box;
@@ -131,19 +140,14 @@
     display: flex;
   }
   .image-container {
-    width: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    width: 40%;
+    margin-top: 20px;
   }
   .text-container {
-    width: 70%;
+    width: 60%;
   }
   .myimage {
     width: 80%;
@@ -155,7 +159,7 @@
   }
 }
 
-/*** スキル ***/
+/***** スキル *****/
 .skills-container {
   -ms-grid-columns: 33% 33% 33%;
       grid-template-columns: 33% 33% 33%;
@@ -223,7 +227,7 @@
   }
 }
 
-/*** サービス ***/
+/***** サービス *****/
 .services-container div,
 .services-container li {
   list-style: none;
@@ -279,7 +283,7 @@
   }
 }
 
-/*** ワーク ***/
+/***** ワーク *****/
 .works-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +349,7 @@
   }
 }
 
-/*** コンタクト ***/
+/***** コンタクト *****/
 .contact-text {
   text-align: center;
 }

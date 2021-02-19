@@ -96,7 +96,7 @@
   background-blend-mode: lighten;
 }
 
-/*** 自己紹介 ***/
+/***** 自己紹介 *****/
 
 .image-container {
   @include positionning_center;
@@ -108,17 +108,27 @@
   border-radius: 50%;
 }
 
+.greeting {
+  line-height: 2;
+}
+
+.my-values {
+  padding-left: 2em;
+  line-height: 2;
+}
+
 @include mq() {
   .myprofile-container {
     display: flex;
   }
 
   .image-container {
-    width: 30%;
-    @include positionning_center;
+    align-items: start;
+    width: 40%;
+    margin-top: 20px;
   }
   .text-container {
-    width: 70%;
+    width: 60%;
   }
 
   .myimage {
@@ -132,7 +142,7 @@
   }
 }
 
-/*** スキル ***/
+/***** スキル *****/
 
 .skills-container {
   grid-template-columns: 33% 33% 33%;
@@ -171,7 +181,7 @@
   }
 }
 
-/*** サービス ***/
+/***** サービス *****/
 
 .services-container {
   @include common-container;
@@ -209,7 +219,7 @@
   }
 }
 
-/*** ワーク ***/
+/***** ワーク *****/
 
 .works-container {
   @include row-container;
@@ -264,7 +274,7 @@
   }
 }
 
-/*** コンタクト ***/
+/***** コンタクト *****/
 
 .contact-text {
   text-align: center;

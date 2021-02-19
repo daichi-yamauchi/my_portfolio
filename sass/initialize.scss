@@ -1,5 +1,10 @@
 @import "fonts.scss";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   position: relative;
   max-width: 1200px;
@@ -7,6 +12,7 @@ body {
   padding: 0;
   color: #111;
 }
+
 h1 {
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -19,8 +25,13 @@ h1 {
   }
 }
 h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 1.3rem;
   font-family: serif;
+}
+h3 {
+  margin-top: 20px;
 }
 
 section {
@@ -37,6 +48,10 @@ a:active {
 
 ul {
   padding: 0;
+}
+
+p {
+  // margin-top: 10px;
 }
 
 @media screen and (min-width: 768px) {
