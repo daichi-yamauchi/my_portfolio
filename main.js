@@ -11,16 +11,17 @@ $(".menu-item").click(function () {
 
 // 特定の位置までスクロール
 let scroll = (link, target) => {
-  let offset = document.documentElement.offsetWidth > 768 ? 80 : 0;
+  // let offset = document.documentElement.offsetWidth > 900 ? 80 : 0;
+  let offset = 0;
   $(link).click(() => {
     $("html,body").animate({ scrollTop: $(target).offset().top - offset });
-    $("#overlay").removeClass("open");
-    $("html div").removeClass("blur");
-    $("#toggle").toggleClass("active");
+    // $("#overlay").removeClass("open");
+    // $("html div").removeClass("blur");
+    // $("#toggle").toggleClass("active");
   });
 };
 
-scroll("#top-link", "#title");
+scroll("#top-link", "#top");
 scroll("#aboutme-link", "#aboutme");
 scroll("#skills-link", "#skills");
 scroll("#services-link", "#services");

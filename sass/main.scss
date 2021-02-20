@@ -193,6 +193,10 @@ $name-size: 2rem;
   border-radius: 50%;
 }
 
+.service-content {
+  flex: 1;
+}
+
 .services-note {
   text-align: center;
 }
@@ -208,6 +212,7 @@ $name-size: 2rem;
   }
   @include mq(lg) {
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 40% 60%;
   }
 }

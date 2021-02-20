@@ -250,6 +250,12 @@ header {
   border-radius: 50%;
 }
 
+.service-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .services-note {
   text-align: center;
 }
@@ -269,6 +275,8 @@ header {
   .work {
     display: -ms-grid;
     display: grid;
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
   }
