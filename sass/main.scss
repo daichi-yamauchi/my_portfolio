@@ -172,42 +172,49 @@ $name-size: 2rem;
 
 /***** スキル *****/
 
-.skills-container {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
-  // @include grid-container;
-  align-items: center;
-  justify-content: center;
-  column-gap: 20px;
-  row-gap: 40px;
+.skills-table {
+  th,
+  td {
+    display: block;
+  }
+  border-collapse: collapse;
+  tr:nth-child(odd) {
+    background-color: #eee;
+  }
   @include mq(md) {
-    grid-template-columns: repeat(4, 1fr);
+    th,
+    td {
+      display: table-cell;
+    }
   }
 }
 
-.skill {
-  width: 100%;
-  list-style: none;
-  @include mq() {
-    width: 120px;
-  }
+.skill-icon {
+  padding: 10px 10px 0;
+  text-align: center;
   img {
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
+    width: 48px;
+  }
+  .ruby-icon {
+    width: 36px;
+  }
+}
+
+.skill-name {
+  width: 6.5em;
+  margin: 0 auto;
+  text-align: center;
+  @include mq(md) {
+    text-align-last: left;
   }
 }
 
 .skill-level {
-  margin: 0;
+  padding: 10px;
+  text-align: center;
 }
-
-@media screen and (min-width: 1024px) {
-  .skills-container {
-    @include row-container;
-    justify-content: space-around;
-  }
+.skill-abletodo {
+  padding: 10px 10px 10px 50px;
 }
 
 /***** サービス *****/

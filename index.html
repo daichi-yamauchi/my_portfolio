@@ -154,42 +154,144 @@
         スキル
       </h1>
 
-      <ul class="skills-container">
-        <li class="skill">
-          <img src="./image/HTML.png" alt="HTML" />
-          <p class="skill-level">Level: ★★★★★</p>
-        </li>
-
-        <li class="skill">
-          <img src="./image/CSS.jpg" alt="CSS" />
-          <p class="skill-level">Level: ★★★★★</p>
-        </li>
-
-        <li class="skill">
-          <img src="./image/Javascript.jpg" alt="Javascript" />
-          <p class="skill-level">Level: ★★★★★<br /></p>
-        </li>
-
-        <li class="skill">
-          <img src="./image/Wordpress.jpg" alt="Wordpress" />
-          <p class="skill-level">Level: ★★★★★</p>
-        </li>
-
-        <li class="skill">
-          <img src="./image/Ruby.jpg" alt="Ruby on Rails" />
-          <p class="skill-level">Level: ★★★★☆<br /></p>
-        </li>
-
-        <li class="skill">
-          <img src="./image/MySQL.png" alt="MySQL" />
-          <p class="skill-level">Level: ★★★★☆</p>
-        </li>
-
-        <li class="skill">
-          <img src="./image/github.jpg" alt="github" />
-          <p class="skill-level">Level: ★★★★★</p>
-        </li>
-      </ul>
+      <table class="skills-table">
+        <tr>
+          <th colspan="2">スキル名</th>
+          <th>レベル</th>
+          <th>できること</th>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img src="image/html5-48.png" alt=""  />
+          </td>
+          <td class="skill-name">HTML</td>
+          <td class="skill-level">★★★★★</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>各種タグの使いこなし</li>
+              <li>文章の構造を理解しながらのマークアップ</li>
+              <li>SEOを意識したマークアップ</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img src="image/css3-48.png" alt=""  />
+          </td>
+          <td class="skill-name">CSS</td>
+          <td class="skill-level">★★★★★</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>各種レイアウトの使いこなし</li>
+              <li>カンプ通りの見た目でのコーディング</li>
+              <li>CSSアニメーションの実装</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img src="image/sass-48.png" alt=""  />
+          </td>
+          <td class="skill-name">Sass</td>
+          <td class="skill-level">★★★★★</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>基本機能の使いこなし</li>
+              <li>繰り返しを用いた動的クラス生成</li>
+              <li>カスタム関数の作成</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img
+              src="image/javascript-48.png"
+              alt=""
+              
+            />
+          </td>
+          <td class="skill-name">Javascript <br>jQuery</td>
+          <td class="skill-level">★★★★★</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>基本的なDOM操作</li>
+              <li>クラス定義、関数定義を用いての複雑なプログラム実装</li>
+              <li>JSアニメーションの実装</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img
+              src="image/wordpress-48.png"
+              alt=""
+              
+            />
+          </td>
+          <td class="skill-name">Wordpress</td>
+          <td class="skill-level">★★★★☆</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>wordpressの構築</li>
+              <li>既存テーマの修正・編集</li>
+              <li>カスタムテーマの作成</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img src="image/mysql-170x115.png" alt=""  />
+            <td>MySQL</td>
+          </t class="skill-name"d>
+          <td class="skill-level">★★★★☆</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>基本的なデータベースの操作</li>
+              <li>データベースの設計</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img src="image/git-48.png" alt=""  />
+          </td>
+          <td class="skill-name">git <br> github</td>
+          <td class="skill-level">★★★★☆</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>gitを用いたプロジェクト管理</li>
+              <li>githubを用いたプロジェクト管理</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="skill-icon">
+            <img src="image/ruby.png" alt="" class="ruby-icon" />
+          </td>
+          <td class="skill-name">Ruby on Rails</td>
+          <td class="skill-level">★★★☆☆</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>Railsアプリケーションの作成</li>
+              <li>各種プラグインの導入</li>
+            </ul>
+          </td>
+        </tr>
+        <!-- <tr>
+          <td class="skill-icon">
+            <img src="image/aws-48.png" alt=""  />
+          </td>
+          <td class="skill-name">AWS</td>
+          <td class="skill-level">★★★☆☆</td>
+          <td class="skill-abletodo">
+            <ul>
+              <li>
+                EC2, RDS, S3, VPC, Route53 を使ったwebサーバー構築ができます。
+              </li>
+            </ul>
+          </td>
+        </tr> -->
+      </table>
     </section>
 
     <!-- サービス紹介 -->

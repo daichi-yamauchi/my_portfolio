@@ -170,69 +170,58 @@ header {
 }
 
 /***** スキル *****/
-.skills-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 40px;
+.skills-table {
+  border-collapse: collapse;
+}
+
+.skills-table th,
+.skills-table td {
+  display: block;
+}
+
+.skills-table tr:nth-child(odd) {
+  background-color: #eee;
 }
 
 @media screen and (min-width: 500px) {
-  .skills-container {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+  .skills-table th,
+  .skills-table td {
+    display: table-cell;
   }
 }
 
-.skill {
-  width: 100%;
-  list-style: none;
+.skill-icon {
+  padding: 10px 10px 0;
+  text-align: center;
 }
 
-@media screen and (min-width: 900px) {
-  .skill {
-    width: 120px;
-  }
+.skill-icon img {
+  width: 48px;
 }
 
-.skill img {
-  width: 70%;
-  height: auto;
+.skill-icon .ruby-icon {
+  width: 36px;
+}
+
+.skill-name {
+  width: 6.5em;
   margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  .skill-name {
+    text-align-last: left;
+  }
 }
 
 .skill-level {
-  margin: 0;
+  padding: 10px;
+  text-align: center;
 }
 
-@media screen and (min-width: 1024px) {
-  .skills-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    justify-content: space-around;
-  }
-  .skills-container div,
-  .skills-container li {
-    list-style: none;
-  }
-  .skills-container div img,
-  .skills-container li img {
-    width: 100%;
-  }
+.skill-abletodo {
+  padding: 10px 10px 10px 50px;
 }
 
 /***** サービス *****/
