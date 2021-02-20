@@ -4,29 +4,6 @@
   justify-content: center;
 }
 
-@mixin common-container {
-  div,
-  li {
-    list-style: none;
-    img {
-      width: 100%;
-    }
-  }
-}
-
-@mixin colunm-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include common-container;
-}
-
-@mixin row-container {
-  display: flex;
-  justify-content: space-around;
-  @include common-container;
-}
-
 // レスポンシブ対応
 $breakpoints: (
   "md": "screen and (min-width: 650px)",

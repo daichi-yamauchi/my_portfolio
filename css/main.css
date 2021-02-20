@@ -382,38 +382,30 @@ header {
 }
 
 /***** コンタクト *****/
-.contact-text {
-  text-align: center;
-}
-
 .contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 300px;
-  margin: 20px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100px;
+  margin-top: 20px;
   padding: 0;
 }
 
-.contact-container div,
-.contact-container li {
+.contact {
+  width: 40px;
   list-style: none;
 }
 
-.contact-container div img,
-.contact-container li img {
+.contact img {
   width: 100%;
 }
 
-.contact {
-  width: 60px;
-}
-
 .contact-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   color: white;
   background-color: #555;
   border-radius: 10%;
@@ -429,14 +421,15 @@ header {
 }
 
 .contact-material {
-  font-size: 40px !important;
+  font-size: 30px !important;
 }
 
 /********************
  * フッター
  ********************/
 .copyright {
-  font-size: 0.3rem;
+  margin: 10px;
+  font-size: 0.7rem;
   text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

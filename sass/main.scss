@@ -302,24 +302,25 @@ $name-size: 2rem;
 
 /***** コンタクト *****/
 
-.contact-text {
-  text-align: center;
-}
-
 .contact-container {
-  @include row-container;
-  width: 300px;
-  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-top: 20px;
   padding: 0;
 }
 
 .contact {
-  width: 60px;
+  width: 40px;
+  list-style: none;
+  img {
+    width: 100%;
+  }
 }
 
 .contact-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   color: white;
   background-color: #555;
   border-radius: 10%;
@@ -327,7 +328,7 @@ $name-size: 2rem;
 }
 
 .contact-material {
-  font-size: 40px !important;
+  font-size: 30px !important;
 }
 
 /********************
@@ -335,6 +336,7 @@ $name-size: 2rem;
  ********************/
 
 .copyright {
-  font-size: 0.3rem;
+  margin: 10px;
+  font-size: 0.7rem;
   text-align: center;
 }
