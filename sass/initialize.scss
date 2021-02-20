@@ -1,41 +1,68 @@
 @import "fonts.scss";
+@import "define.scss";
 
 * {
   margin: 0;
   padding: 0;
+  color: #333;
+}
+
+html {
+  // font-size: 62.5%; // 文字サイズをrem指定にする(1rem=10px)
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  color: #111;
+  // padding: 0 5%;
+  // @include mq() {
+  //   padding: 0 10%;
+  // }
+}
+
+h1,
+h2 {
+  font-family: "Butler", serif;
 }
 
 h1 {
   margin-bottom: 20px;
   font-size: 1.8rem;
-  font-family: serif;
-  text-align: center;
+
+  @include mq() {
+    font-size: 2.5rem;
+  }
+
   span.material-icons {
     display: inline-flex;
-    font-size: 1.5rem;
+    color: #111;
+    font-size: 1em;
     vertical-align: -0.1em;
+    @include mq() {
+      font-size: 2.5rem;
+    }
   }
 }
+
 h2 {
   margin-top: 20px;
-  margin-bottom: 10px;
   font-size: 1.3rem;
-  font-family: serif;
+  @include mq() {
+    font-size: 1.5rem;
+  }
 }
+
 h3 {
   margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 section {
-  margin: 20px;
+  margin-top: 20px;
+  padding: 0 5%;
+  @include mq() {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
 }
 
 a:link,
@@ -44,32 +71,4 @@ a:hover,
 a:active {
   color: #111;
   text-decoration: none;
-}
-
-ul {
-  padding: 0;
-}
-
-p {
-  // margin-top: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #111;
-  }
-  h1 {
-    font-size: 2.5rem;
-    span.material-icons {
-      font-size: 2.5rem;
-    }
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  section {
-    margin: 50px;
-  }
 }

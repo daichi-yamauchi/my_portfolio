@@ -91,17 +91,17 @@
           transform: rotate(-45deg);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   #nav-menu {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
-    right: 0;
-    left: 0;
     z-index: 3;
     display: block;
     height: 80px;
-    background-color: white;
-    border-bottom: solid 1px #eee;
+    padding: 0 10%;
+    background-color: #fcfcfc;
+    border-bottom: solid 1px #ccc;
   }
   .menu-list {
     display: -webkit-box;

@@ -17,44 +17,70 @@
 * {
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
-body {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  color: #111;
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Butler", serif;
 }
 
 h1 {
   margin-bottom: 20px;
   font-size: 1.8rem;
-  font-family: serif;
-  text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 h1 span.material-icons {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 1.5rem;
+  color: #111;
+  font-size: 1em;
   vertical-align: -0.1em;
+}
+
+@media screen and (min-width: 900px) {
+  h1 span.material-icons {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
   margin-top: 20px;
-  margin-bottom: 10px;
   font-size: 1.3rem;
-  font-family: serif;
+}
+
+@media screen and (min-width: 900px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 h3 {
   margin-top: 20px;
+  font-size: 1.2rem;
 }
 
 section {
-  margin: 20px;
+  margin-top: 20px;
+  padding: 0 5%;
+}
+
+@media screen and (min-width: 900px) {
+  section {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
 }
 
 a:link,
@@ -63,29 +89,5 @@ a:hover,
 a:active {
   color: #111;
   text-decoration: none;
-}
-
-ul {
-  padding: 0;
-}
-
-@media screen and (min-width: 768px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #111;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h1 span.material-icons {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  section {
-    margin: 50px;
-  }
 }
 /*# sourceMappingURL=initialize.css.map */

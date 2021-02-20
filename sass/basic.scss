@@ -1,0 +1,76 @@
+/***** フォント *****/
+.bold {
+  font-weight: bold;
+}
+
+.red-bold {
+  color: red;
+  font-weight: bold;
+}
+
+.white {
+  color: #fff;
+}
+
+/***** フォントサイズ *****/
+
+$font-sizes: (
+  small: 1.4rem,
+  medium: 1.6rem,
+  mid-large: 1.8rem,
+  large: 2.4rem,
+  xlarge: 2.8rem,
+  xxlarge: 3.2rem,
+);
+
+@each $key, $size in $font-sizes {
+  .font-#{$key} {
+    font-size: $size;
+  }
+}
+
+/***** 行高さ *****/
+
+$lh-values: 1.5, 2;
+
+@each $value in $lh-values {
+  .lh-#{$value} {
+    line-height: $value;
+  }
+}
+
+/***** 配置 *****/
+
+.text-align-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/***** マージン *****/
+
+$mt-values: 0, 20, 30, 60, 90;
+
+@each $value in $mt-values {
+  .mt-#{$value} {
+    margin-top: $value * 1px;
+  }
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/***** アニメーション *****/
+.fadein {
+  visibility: hidden;
+}

@@ -27,19 +27,21 @@
   @include common-container;
 }
 
-@mixin grid-container {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  @include common-container;
-}
+// @mixin grid-container {
+//   display: grid;
+//   align-items: center;
+//   justify-items: center;
+//   @include common-container;
+// }
 
 // レスポンシブ対応
 $breakpoints: (
-  "pc": "screen and (min-width: 768px)",
+  "md": "screen and (min-width: 500px)",
+  "lg": "screen and (min-width: 900px)",
+  "xlg": "screen and (min-width: 1200px)",
 ) !default;
 
-@mixin mq($breakpoint: pc) {
+@mixin mq($breakpoint: lg) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }

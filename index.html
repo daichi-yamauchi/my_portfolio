@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daichi Yamauchi -Webエンジニア-</title>
     <link rel="stylesheet" href="css/initialize.css" />
+    <link rel="stylesheet" href="css/basic.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/animate.css" />
@@ -12,6 +13,14 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
+    <!-- Noto Sans JP フォント -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
@@ -19,44 +28,40 @@
   </head>
 
   <body>
-    <!--ヘッダー-->
     <header>
-      <!--メニューバー-->
-      <div id="hamburger-btn">
-        <span class="bun"></span>
-      </div>
-      <nav id="nav-menu">
-        <ul class="menu-list">
-          <li class="menu-item">
-            <a href="#" id="top-link" class="menu-link">トップ</a>
-          </li>
-          <li class="menu-item">
-            <a href="#" id="aboutme-link" class="menu-link">自己紹介</a>
-          </li>
-          <li class="menu-item">
-            <a href="#" id="skills-link" class="menu-link">スキル</a>
-          </li>
-          <li class="menu-item">
-            <a href="#" id="services-link" class="menu-link">サービス内容</a>
-          </li>
-          <li class="menu-item">
-            <a href="#" id="works-link" class="menu-link">制作物</a>
-          </li>
-          <li class="menu-item">
-            <a href="#" id="contact-link" class="menu-link">お問い合わせ</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!--タイトル-->
-    <section class="title-section" id="title">
-      <div class="main-image"></div>
       <div class="title-container">
         <span class="myprefix">Webエンジニア</span><br />
-        <span class="myname">Daichi<br />YAMAUCHI</span>
+        <span class="myname">Daichi YAMAUCHI</span><br />
+        <span class="page-title">ポートフォリオサイト</span>
       </div>
-    </section>
+    </header>
+
+    <!--メニューバー-->
+    <div id="hamburger-btn">
+      <span class="bun"></span>
+    </div>
+    <nav id="nav-menu">
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a href="#" id="top-link" class="menu-link">トップ</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="aboutme-link" class="menu-link">自己紹介</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="skills-link" class="menu-link">スキル</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="services-link" class="menu-link">サービス内容</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="works-link" class="menu-link">制作物</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" id="contact-link" class="menu-link">お問い合わせ</a>
+        </li>
+      </ul>
+    </nav>
 
     <!-- 自己紹介 -->
     <section class="aboutme-section animated fadein" id="aboutme">
@@ -67,24 +72,23 @@
         </h1>
       </div>
 
-      <div class="myprofile-container">
-        <div class="image-container flexbox1">
+      <div class="myprofile-container mt-20">
+        <div class="image-container">
           <img
             src="./image/my_profile.jpg"
             alt="プロフィール写真"
             class="myimage"
           />
         </div>
-
         <div class="text-container">
-          <h2>ご挨拶</h2>
-          <p class="greeting">
-            はじめまして。webエンジニアの<span class="bold">山内　大地</span
+          <h2 class="mt-0">ご挨拶</h2>
+          <p class="lh-2 mt-10">
+            はじめまして。webエンジニアの<span class="bold">山内 大地</span
             >と申します。<br />
-            この度は、私のポートフォリオサイトをご覧いただき誠にありがとうございます。私はweb制作活動に当たり、「<span
+            私のポートフォリオサイトをご覧いただき誠にありがとうございます。私はweb制作活動に当たり、「<span
               class="bold"
               >web制作を通してクライアント様の真の目的を達成するためのお手伝いをする。</span
-            >」を理念に掲げております。すべてのクライアント様へ、下記の価値を提供することをお約束致します。
+            >」を理念に掲げております。すべてのクライアント様へ下記の価値を提供することをお約束致します。
 
             <br />
           </p>
@@ -106,21 +110,39 @@
               また、どんなに小さなお仕事でも、手を抜かず丁寧に作業させていただきます。<br />
             </p>
           </div>
-          <h2>
-            <span
-              class="glyphicon glyphicon-education"
-              style="letter-spacing: 5px"
-            ></span>
-            経歴
-          </h2>
-          <p>
-            2011年 ：愛知県立岡崎東高等学校卒業<br />
-            2015年 ：名古屋工業大学工学部電気電子工学科卒業<br />
-            2017年
-            ：名古屋工業大学大学院情報工学専攻卒業（国際学会での受賞歴あり）<br />
-            2017年 ：大手自動車部品メーカに入社、製品の設計業務に従事<br />
-            現在　：web制作活動に注力<br />
-          </p>
+        </div>
+        <div class="career-container">
+          <h2>経歴</h2>
+          <table class="career-table">
+            <tr>
+              <th>2011年</th>
+              <td>愛知県立岡崎東高等学校卒業</td>
+            </tr>
+            <tr>
+              <th>2015年</th>
+              <td>名古屋工業大学卒業</td>
+            </tr>
+
+            <tr>
+              <th>2017年</th>
+              <td>名古屋工業大学大学院卒業（国際学会での受賞歴あり）</td>
+            </tr>
+
+            <tr>
+              <th>2017年</th>
+              <td>大手自動車部品メーカに入社、製品の設計業務に従事</td>
+            </tr>
+
+            <tr>
+              <th>現在</th>
+              <td>web制作活動に注力</td>
+            </tr>
+
+            <tr>
+              <th>2021年3月</th>
+              <td>フリーランスとして独立予定</td>
+            </tr>
+          </table>
         </div>
       </div>
     </section>
@@ -182,7 +204,7 @@
           <div class="service-image-container">
             <img src="./image/coding.jpg" alt="coding" class="service-image" />
           </div>
-          <h2 class="sevice">コーディング</h2>
+          <h2>コーディング</h2>
           <p>
             LPやコーポレートサイト、ブログなど、
             目的に応じた適切なコーディングを行います(レスポンシブ対応可)。また、軽微なコードの修正などにも対応しています。<br />
@@ -200,7 +222,7 @@
               class="service-image"
             />
           </div>
-          <h2 class="sevice">Wordpress</h2>
+          <h2>Wordpress</h2>
           <p>
             コーポレートサイトや個人ブログ、およびウェブマガジンなどのWordPressサイトの構築や既存サイトのWordPress移行、コードの修正に対応しております。
             <br />
@@ -210,7 +232,7 @@
           </p>
         </li>
       </ul>
-      <p class="services-note">
+      <p class="text-align-center mt-20">
         ※正式なお見積もりは、別途ご相談させていただきます。
       </p>
     </section>
@@ -318,7 +340,7 @@
             class="gmail"
           >
             <div class="contact-icon">
-              <span class="material-icons contact-material">email</span>
+              <span class="material-icons contact-material white">email</span>
             </div>
           </a>
         </li>

@@ -1,177 +1,206 @@
 @import "fonts.scss";
 @import "define.scss";
 
-/* 共通 */
-.bold {
-  font-weight: bold;
-}
-
-.red-bold {
-  color: red;
-  font-weight: bold;
-}
-
-.fadein {
-  visibility: hidden;
-}
-
 /********************
 * 各セクション 
 ********************/
 
-/*** タイトル ***/
-
-.title-section {
-  height: 150vw;
+/***** ヘッダー *****/
+header {
+  padding: 10px 5%;
+  @include mq() {
+    padding: 10px 10%;
+  }
 }
 
-.main-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-  width: calc(100vw - 15px);
-  height: 150vw;
-  background: linear-gradient(to bottom, transparent, 90%, white),
-    url("../image/background2.jpg");
-  background-color: rgba(255, 255, 255, 0);
-  background-size: contain;
-  background-blend-mode: lighten;
-  transition: all 1s;
-}
-
-.title-container {
-  position: absolute;
-  top: 100vw;
-  right: 10%;
-  text-align: end;
-}
-
-.myprefix {
-  font-weight: normal;
-  font-size: 5vw;
+.title-container > span {
   font-family: "Butler", serif;
   font-style: normal;
+}
+
+$name-size: 2rem;
+
+.myprefix {
+  $prefix-size: $name-size * 0.5;
+  font-weight: normal;
+  font-size: $prefix-size;
+  @include mq(md) {
+    font-size: $prefix-size * 1.2;
+  }
+  @include mq() {
+    font-size: $prefix-size * 1.5;
+  }
 }
 
 .myname {
   font-weight: bold;
-  font-size: 12vw;
-  font-family: "Butler", serif;
-  font-style: normal;
-}
-
-@include mq() {
-  .title-section {
-    height: 70vw;
+  font-size: $name-size;
+  @include mq(md) {
+    font-size: $name-size * 1.2;
   }
-
-  .main-image {
-    position: fixed;
-    top: 80px;
-    right: 0;
-    left: 0;
-    height: 75vw;
-    background: linear-gradient(to bottom, transparent 80%, white 90%),
-      url("../image/background1.jpg");
-  }
-
-  .title-container {
-    top: 40vw;
-    right: 10%;
-  }
-
-  .myprefix {
-    font-size: 1rem;
-  }
-
-  .myname {
-    font-size: 3rem;
+  @include mq() {
+    font-size: $name-size * 1.5;
   }
 }
 
-.bg-dilute {
-  background-color: rgba(255, 255, 255, 0.9);
-  background-blend-mode: lighten;
+.page-title {
+  $title-size: $name-size * 413/474.73;
+  font-weight: bold;
+  font-size: $title-size;
+  @include mq(md) {
+    font-size: $title-size * 1.2;
+  }
+  @include mq() {
+    font-size: $title-size * 1.5;
+  }
 }
+
+// /*** タイトル ***/
+
+// .title-section {
+//   height: 150vw;
+// }
+
+// .main-image {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+//   display: block;
+//   width: calc(100vw - 15px);
+//   height: 150vw;
+//   background: linear-gradient(to bottom, transparent, 90%, white),
+//     url("../image/background2.jpg");
+//   background-color: rgba(255, 255, 255, 0);
+//   background-size: contain;
+//   background-blend-mode: lighten;
+//   transition: all 1s;
+// }
+
+// // .title-container {
+// //   position: absolute;
+// //   top: 100vw;
+// //   right: 10%;
+// //   text-align: end;
+// // }
+
+// @include mq() {
+//   .title-section {
+//     height: 70vw;
+//   }
+
+//   .main-image {
+//     position: fixed;
+//     top: 80px;
+//     right: 0;
+//     left: 0;
+//     height: 75vw;
+//     background: linear-gradient(to bottom, transparent 80%, white 90%),
+//       url("../image/background1.jpg");
+//   }
+// }
+
+// .bg-dilute {
+//   background-color: rgba(255, 255, 255, 0.9);
+//   background-blend-mode: lighten;
+// }
 
 /***** 自己紹介 *****/
 
 .image-container {
-  @include positionning_center;
-}
-
-.myimage {
-  width: 80%;
-  max-width: 200px;
-  border-radius: 50%;
-}
-
-.greeting {
-  line-height: 2;
+  @include positionning_center();
+  img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 50%;
+  }
 }
 
 .my-values {
-  padding-left: 2em;
-  line-height: 2;
+  padding-left: 1em;
+  p {
+    margin-top: 5px;
+    line-height: 1.5;
+  }
 }
 
+.career-table {
+  border-collapse: collapse;
+  th {
+    width: 5em;
+    padding: 7px;
+    font-weight: 400;
+    text-align: right;
+    border-right: solid 1px #ccc;
+  }
+  td {
+    padding: 7px;
+  }
+}
+
+// 画面サイズlg以上でのグリッドレイアウト
 @include mq() {
   .myprofile-container {
-    display: flex;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 60% 1fr;
+    // justify-content: space-between;
   }
 
   .image-container {
-    align-items: start;
-    width: 40%;
-    margin-top: 20px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: start;
+    padding-left: 10%;
   }
   .text-container {
-    width: 60%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
-
-  .myimage {
-    width: 80%;
-    max-width: 200px;
-    border-radius: 50%;
-  }
-
-  .education-container {
-    padding-left: 30px;
+  .career-container {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 10%;
   }
 }
 
 /***** スキル *****/
 
 .skills-container {
-  grid-template-columns: 33% 33% 33%;
-  @include grid-container;
-  column-gap: 10px;
-  row-gap: 30px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  // @include grid-container;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 40px;
+  @include mq(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .skill {
-  width: 80px;
+  width: 100%;
+  list-style: none;
+  @include mq() {
+    width: 120px;
+  }
+  img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 .skill-level {
   margin: 0;
-}
-
-@media screen and (min-width: 576px) {
-  .skills-container {
-    grid-template-columns: 25% 25% 25% 25%;
-  }
-  .skill {
-    width: 100px;
-  }
-}
-
-@include mq() {
-  .skill {
-    width: 120px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -283,7 +312,7 @@
 .contact-container {
   @include row-container;
   width: 300px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0;
 }
 

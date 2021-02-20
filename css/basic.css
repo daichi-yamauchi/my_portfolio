@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/***** フォント *****/
+.bold {
+  font-weight: bold;
+}
+
+.red-bold {
+  color: red;
+  font-weight: bold;
+}
+
+.white {
+  color: #fff;
+}
+
+/***** フォントサイズ *****/
+.font-small {
+  font-size: 1.4rem;
+}
+
+.font-medium {
+  font-size: 1.6rem;
+}
+
+.font-mid-large {
+  font-size: 1.8rem;
+}
+
+.font-large {
+  font-size: 2.4rem;
+}
+
+.font-xlarge {
+  font-size: 2.8rem;
+}
+
+.font-xxlarge {
+  font-size: 3.2rem;
+}
+
+/***** 行高さ *****/
+.lh-1.5 {
+  line-height: 1.5;
+}
+
+.lh-2 {
+  line-height: 2;
+}
+
+/***** 配置 *****/
+.text-align-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/***** マージン *****/
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/***** アニメーション *****/
+.fadein {
+  visibility: hidden;
+}
+/*# sourceMappingURL=basic.css.map */
