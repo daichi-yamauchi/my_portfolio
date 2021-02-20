@@ -27,16 +27,9 @@
   @include common-container;
 }
 
-// @mixin grid-container {
-//   display: grid;
-//   align-items: center;
-//   justify-items: center;
-//   @include common-container;
-// }
-
 // レスポンシブ対応
 $breakpoints: (
-  "md": "screen and (min-width: 500px)",
+  "md": "screen and (min-width: 650px)",
   "lg": "screen and (min-width: 900px)",
   "xlg": "screen and (min-width: 1200px)",
 ) !default;

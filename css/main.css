@@ -39,7 +39,7 @@ header {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   .myprefix {
     font-size: 1.2rem;
   }
@@ -56,7 +56,7 @@ header {
   font-size: 2rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   .myname {
     font-size: 2.4rem;
   }
@@ -73,7 +73,7 @@ header {
   font-size: 1.73994rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   .page-title {
     font-size: 2.08792rem;
   }
@@ -183,7 +183,7 @@ header {
   background-color: #eee;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   .skills-table th,
   .skills-table td {
     display: table-cell;
@@ -209,7 +209,7 @@ header {
   text-align: center;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
   .skill-name {
     text-align-last: left;
   }
@@ -225,59 +225,32 @@ header {
 }
 
 /***** サービス *****/
-.services-container div,
-.services-container li {
+.services-container {
   list-style: none;
 }
 
-.services-container div img,
-.services-container li img {
-  width: 100%;
+@media screen and (min-width: 650px) {
+  .service-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-.service-image-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 56%;
+.service-item:not(:nth-child(1)) {
+  margin-top: 40px;
 }
 
 .service-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
+  display: block;
+  width: 200px;
+  margin: auto;
+  padding: 0 20px;
+  border-radius: 50%;
 }
 
 .services-note {
   text-align: center;
-}
-
-@media screen and (min-width: 900px) {
-  .services-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .services-container div,
-  .services-container li {
-    list-style: none;
-  }
-  .services-container div img,
-  .services-container li img {
-    width: 100%;
-  }
-  .service {
-    width: 45%;
-  }
 }
 
 /***** ワーク *****/

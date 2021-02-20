@@ -220,39 +220,28 @@ $name-size: 2rem;
 /***** サービス *****/
 
 .services-container {
-  @include common-container;
+  list-style: none;
 }
 
-.service-image-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-top: 56%;
+.service-item {
+  @include mq(md) {
+    display: flex;
+  }
+  &:not(:nth-child(1)) {
+    margin-top: 40px;
+  }
 }
 
 .service-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 0;
+  display: block;
+  width: 200px;
+  margin: auto;
+  padding: 0 20px;
+  border-radius: 50%;
 }
 
 .services-note {
   text-align: center;
-}
-
-@include mq() {
-  .services-container {
-    @include row-container;
-  }
-
-  .service {
-    width: 45%;
-  }
 }
 
 /***** ワーク *****/
