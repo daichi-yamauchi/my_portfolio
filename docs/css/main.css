@@ -1,0 +1,368 @@
+@charset "UTF-8";
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Butler-Bold.woff") format("woff");
+  src: url("../fonts/Butler-Bold.woff2") format("woff2");
+  font-family: "Butler";
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Butler.woff") format("woff");
+  src: url("../fonts/Butler.woff2") format("woff2");
+  font-family: "Butler";
+}
+/********************
+* 各セクション 
+********************/
+/***** ヘッダー *****/
+header {
+  padding: 10px 5%;
+  background-color: #fafafa;
+}
+
+.title-container > span {
+  font-style: normal;
+  font-family: "Butler", serif;
+}
+
+.myprefix {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.myname {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 1.7399363849rem;
+}
+
+/***** 自己紹介 *****/
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-container img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+.my-values {
+  padding-left: 1em;
+}
+.my-values p {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.career-table {
+  border-collapse: collapse;
+}
+.career-table th {
+  width: 5em;
+  padding: 7px;
+  border-right: solid 1px #ccc;
+  font-weight: 400;
+  text-align: right;
+}
+.career-table td {
+  padding: 7px;
+}
+/***** スキル *****/
+.skills-table {
+  border-collapse: collapse;
+}
+.skills-table th,
+.skills-table td {
+  display: block;
+}
+.skills-table tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.skill-icon {
+  padding: 10px 10px 0;
+  text-align: center;
+}
+.skill-icon img {
+  width: 48px;
+}
+.skill-icon .ruby-icon {
+  width: 36px;
+}
+
+.skill-name {
+  width: 6.5em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skill-level {
+  padding: 10px;
+  text-align: center;
+}
+
+.skill-abletodo {
+  padding: 10px 10px 10px 50px;
+}
+
+/***** サービス *****/
+.services-container {
+  list-style: none;
+}
+.service-item:not(:nth-child(1)) {
+  margin-top: 40px;
+}
+
+.service-image {
+  display: block;
+  width: 200px;
+  margin: auto;
+  padding: 0 20px;
+  border-radius: 50%;
+}
+
+.service-content {
+  flex: 1;
+}
+
+.services-note {
+  text-align: center;
+}
+
+/***** ワーク *****/
+.work {
+  padding-right: 10px;
+  padding-left: 10px;
+  list-style: none;
+}
+.work:not(:first-child) {
+  padding-top: 30px;
+  border-top: solid 1px lightgray;
+}
+.work:not(:last-child) {
+  padding-bottom: 30px;
+}
+.work-caption .work-category {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  font-family: "Butler", serif;
+}
+.work-caption .tech-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.work-caption .tech-tags-list li {
+  height: 1.5em;
+  margin: 5px;
+  padding: 0 1em;
+  border: solid 1px #eee;
+  border-radius: 0.75em;
+  background-color: #fafafa;
+  font-size: 0.8rem;
+}
+
+.work-image {
+  display: block;
+  width: 100%;
+  border: solid 1px #eee;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.work-content .work-text {
+  margin-top: 10px;
+}
+.work-content .link-container .link-btn {
+  position: relative;
+  width: 10em;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #eee;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.work-content .link-container .link-btn:hover {
+  background-color: #aaa;
+  color: #eee;
+}
+.work-content .link-container .link-btn a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.work-feature-list {
+  margin: 0;
+  padding-left: 30px;
+  list-style: none;
+}
+.work-feature-list li {
+  position: relative;
+}
+.work-feature-list li::before {
+  -webkit-transform: translate(-100%, -50%);
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 10px;
+  transform: translate(-100%, -50%);
+  border-top: solid 5px transparent;
+  border-right: solid 10px transparent;
+  border-bottom: solid 5px transparent;
+  border-left: solid 10px gray;
+  content: "";
+}
+
+/***** コンタクト *****/
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.contact {
+  width: 40px;
+  list-style: none;
+}
+.contact img {
+  width: 100%;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  background-color: #555;
+  color: white;
+}
+
+.contact-material {
+  font-size: 30px !important;
+}
+
+/********************
+ * フッター
+ ********************/
+.copyright {
+  margin: 10px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  header {
+    padding: 10px 10%;
+  }
+  .myprefix {
+    font-size: 1.5rem;
+  }
+  .myname {
+    font-size: 3rem;
+  }
+  .page-title {
+    font-size: 2.6099045773rem;
+  }
+  .myprofile-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 60% 1fr;
+  }
+
+  .image-container {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: start;
+    padding-left: 10%;
+  }
+
+  .text-container {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .career-container {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 10%;
+  }
+  .work {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 40% 60%;
+  }
+  .work-caption {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: 20px;
+  }
+  .work-image {
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  .work-content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 650px) {
+  .myprefix {
+    font-size: 1.2rem;
+  }
+  .myname {
+    font-size: 2.4rem;
+  }
+  .page-title {
+    font-size: 2.0879236619rem;
+  }
+  .skills-table th,
+.skills-table td {
+    display: table-cell;
+  }
+  .skill-name {
+    -moz-text-align-last: left;
+    text-align-last: left;
+  }
+  .service-item {
+    display: flex;
+  }
+  .work-content .link-container {
+    display: flex;
+  }
+}
+/*# sourceMappingURL=main.css.map */

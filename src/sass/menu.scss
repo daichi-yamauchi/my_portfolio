@@ -1,0 +1,137 @@
+@import "define.scss";
+
+@mixin positionning_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/********************
+ * メニューバー 
+ ********************/
+
+#nav-menu {
+  display: none;
+  &.hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    // align-items: end;
+    // justify-content: end;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.9);
+  }
+}
+
+.menu-list {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.menu-item {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: serif;
+}
+
+#hamburger-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.bun,
+.bun:before,
+.bun:after {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: hsla(0, 0%, 60%, 0.5);
+  border-radius: 3px;
+  content: "";
+}
+
+.bun:before {
+  bottom: 8px;
+}
+.bun:after {
+  top: 8px;
+}
+
+.in-open .bun {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /*メニューオープン時は真ん中の線を透明にする*/
+  &::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@include mq() {
+  #nav-menu {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: block;
+    height: 80px;
+    padding: 0 10%;
+    background-color: #fafafa;
+    border-bottom: solid 1px #ccc;
+  }
+
+  .menu-list {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+  }
+
+  .menu-item {
+    width: 120px;
+    height: 80px;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: serif;
+    text-align: center;
+    list-style: none;
+    @include positionning_center;
+  }
+
+  .menu-link {
+    width: 100%;
+    height: 80px;
+    color: #111;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+      color: #eee;
+      background-color: #aaa;
+    }
+  }
+
+  #hamburger-btn {
+    display: none;
+  }
+}

@@ -1,13 +1,52 @@
 {
+  "name": "YourCoding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:css": "stylelint **/*.{css,scss,sass}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "css-declaration-sorter": "^6.0.2",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "postcss": "^8.2.7",
+    "postcss-html": "^0.36.0",
+    "postcss-syntax": "^0.36.2",
     "prettier": "^2.2.1",
-    "prettier-stylelint": "^0.4.2",
-    "stylelint": "^13.9.0",
+    "sass": "^1.32.8",
+    "stylelint": "^13.11.0",
     "stylelint-config": "^0.1.1",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recess-order": "^2.3.0",
     "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^3.19.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1% in JP",
+    "IE 11"
+  ],
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "stylelint-config-rational-order": "^0.1.2"
   }
 }

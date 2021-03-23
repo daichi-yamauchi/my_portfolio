@@ -31,11 +31,11 @@ $font-sizes: (
 
 /***** 行高さ *****/
 
-$lh-values: 1.5, 2;
+$lh-values: 15, 20;
 
 @each $value in $lh-values {
   .lh-#{$value} {
-    line-height: $value;
+    line-height: $value / 10;
   }
 }
 

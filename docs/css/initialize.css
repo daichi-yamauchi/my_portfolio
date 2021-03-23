@@ -1,0 +1,79 @@
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Butler-Bold.woff") format("woff");
+  src: url("../fonts/Butler-Bold.woff2") format("woff2");
+  font-family: "Butler";
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Butler.woff") format("woff");
+  src: url("../fonts/Butler.woff2") format("woff2");
+  font-family: "Butler";
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Butler", serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+h1 span.material-icons {
+  display: inline-flex;
+  color: #111;
+  font-size: 1em;
+  vertical-align: -0.1em;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+section {
+  margin-top: 20px;
+  padding: 0 5%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #111;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h1 span.material-icons {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  section {
+    margin-top: 50px;
+    padding: 0 10%;
+  }
+}
+/*# sourceMappingURL=initialize.css.map */

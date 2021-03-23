@@ -23,8 +23,8 @@ $name-size: 2rem;
 
 .myprefix {
   $prefix-size: $name-size * 0.5;
-  font-weight: normal;
   font-size: $prefix-size;
+  font-weight: normal;
   @include mq(md) {
     font-size: $prefix-size * 1.2;
   }
@@ -34,8 +34,8 @@ $name-size: 2rem;
 }
 
 .myname {
-  font-weight: bold;
   font-size: $name-size;
+  font-weight: bold;
   @include mq(md) {
     font-size: $name-size * 1.2;
   }
@@ -46,8 +46,8 @@ $name-size: 2rem;
 
 .page-title {
   $title-size: $name-size * 413/474.73;
-  font-weight: bold;
   font-size: $title-size;
+  font-weight: bold;
   @include mq(md) {
     font-size: $title-size * 1.2;
   }
@@ -188,8 +188,8 @@ $name-size: 2rem;
 .service-image {
   display: block;
   width: 200px;
-  margin: auto;
   padding: 0 20px;
+  margin: auto;
   border-radius: 50%;
 }
 
@@ -204,11 +204,15 @@ $name-size: 2rem;
 /***** ワーク *****/
 
 .work {
-  margin-top: 10px;
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   list-style: none;
-  &:not(:nth-child(1)) {
-    margin-top: 30px;
+  &:not(:first-child) {
+    padding-top: 30px;
+    border-top: solid 1px lightgray;
+  }
+  &:not(:last-child) {
+    padding-bottom: 30px;
   }
   @include mq(lg) {
     display: grid;
@@ -226,10 +230,10 @@ $name-size: 2rem;
     margin-left: 20px;
   }
   .work-category {
-    font-weight: normal;
-    font-size: 0.8rem;
     font-family: "Butler", serif;
+    font-size: 0.8rem;
     font-style: normal;
+    font-weight: normal;
   }
 
   .tech-tags-list {
@@ -239,8 +243,8 @@ $name-size: 2rem;
     li {
       $height: 1.5em;
       height: $height;
-      margin: 5px;
       padding: 0 1em;
+      margin: 5px;
       font-size: 0.8rem;
       background-color: #fafafa;
       border: solid 1px #eee;
@@ -252,15 +256,17 @@ $name-size: 2rem;
 .work-image {
   display: block;
   width: 100%;
-
-  margin: 10px auto auto;
   border: solid 1px #eee;
   box-shadow: 0px 2px 3px rgba(#000, 0.2);
   @include mq(lg) {
+    position: relative;
+    top: 50%;
+    left: 50%;
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    transform: translateY(-50%) translateX(-50%);
   }
 }
 
@@ -284,8 +290,8 @@ $name-size: 2rem;
     .link-btn {
       position: relative;
       width: 10em;
-      margin: 10px auto;
       padding: 5px 10px;
+      margin: 10px auto;
       text-align: center;
       background-color: #eee;
       border-radius: 3px;
@@ -305,14 +311,38 @@ $name-size: 2rem;
   }
 }
 
+.work-feature-list {
+  padding-left: 30px;
+  margin: 0;
+  list-style: none;
+  li {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      box-sizing: border-box;
+      display: block;
+      width: 20px;
+      height: 10px;
+      content: "";
+      border-top: solid 5px transparent;
+      border-right: solid 10px transparent;
+      border-bottom: solid 5px transparent;
+      border-left: solid 10px gray;
+      transform: translate(-100%, -50%);
+    }
+  }
+}
+
 /***** コンタクト *****/
 
 .contact-container {
   display: flex;
   justify-content: space-between;
   width: 100px;
-  margin-top: 20px;
   padding: 0;
+  margin-top: 20px;
 }
 
 .contact {
